@@ -36,10 +36,10 @@ async function obtenerPokemon(idOrName) {
         nameEl.innerHTML = `${data.id} - <span>${nombreCapitalizado}</span>`;
 
         const animated = data.sprites.versions?.['generation-v']?.['black-white']?.animated?.front_default;
-        imgEl.src = animated || data.sprites.front_default || './images/missingno.webp';
+        imgEl.src = animated || data.sprites.front_default || './images/missingno.png';
         imgEl.alt = data.name || 'MissingNo';
 
-        if (imgEl.src.includes('missingno.webp')) {
+        if (imgEl.src.includes('missingno.png')) {
         imgEl.style.width = '64px';
         imgEl.style.height = '64px';
         } else {
@@ -51,7 +51,7 @@ async function obtenerPokemon(idOrName) {
         clearTimeout(timeout);
 
         nameEl.textContent = '#??? - ERROR. Not Found';
-        imgEl.src = './images/missingno.webp';
+        imgEl.src = './images/missingno.png';
         imgEl.alt = 'MissingNo';
         imgEl.style.width = '64px';
         imgEl.style.height = '64px';
